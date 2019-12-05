@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: debug
-        run: echo "${{ github.event.issue.labels }}"
+        run: echo "${{ github.event.issue.labels[0] }}"
       - name: Create Issue Branch
         uses: robvanderleek/create-issue-branch@master
         if: contains(github.event.issue.labels, 'Agent issue')

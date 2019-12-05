@@ -8,3 +8,4 @@ jobs:
         steps:
         - name: Create Issue Branch
           uses: robvanderleek/create-issue-branch@master
+          if: !contains(github.event.issue.labels,"Agent issue")
